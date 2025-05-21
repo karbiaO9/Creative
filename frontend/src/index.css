@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Poppins","sans-serif";
+        
+    }
+    
+    
+
+    
+      body {
+        background: linear-gradient(132deg, 
+        #8b0000,   /* dark red */
+        #00008b,   /* dark blue */
+        #8b008b    /* dark pink (dark magenta) */
+      );
+        background-size: 400% 400%;
+        animation: BackgroundGradient 15s ease infinite;
+      }
+      
+      @keyframes BackgroundGradient {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+    
+    
+}
+
+@layer components {
+  .input-box {
+    @apply w-full mb-4 px-4 py-2 border rounded  bg-[#eaf4ff]  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary ;
+  }
+  
+  
+  .btn-primary {
+  @apply   w-full bg-cyan-500 text-white shadow-lg shadow-cyan-200 py-2 rounded-full mb-2 hover:text-black transition;
+  }
+
+  .btn-light {
+    @apply w-full  bg-cyan-50 text-primary shadow-2xl shadow-cyan-200 border border-cyan-100  py-2 rounded-full mb-2 hover:bg-primary hover:text-black transition;
+    }  
+}
+
